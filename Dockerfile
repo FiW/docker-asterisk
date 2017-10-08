@@ -19,11 +19,11 @@ RUN \
 
 	# asterisk
 
-	apt -y install \
-		libncursesw5-dev \
+	apt-get install -y \
+		libncurses5-dev \
 		uuid-dev \
 		libjansson4 libjansson-dev \
-		libxml2 libxml2-dev \
+		xmlstarlet libxml2-dev libxslt1-dev \
 		libsqlite3-dev \
 		libssl-dev \
 #		zlib1g-dev \
@@ -57,6 +57,7 @@ RUN \
 		--disable BUILD_NATIVE \
 		--disable CORE-SOUNDS-EN-GSM \
 		--enable CORE-SOUNDS-RU-ULAW \
+		--enable codec_opus
 	&&\
 
 	# mp3
@@ -82,7 +83,7 @@ RUN \
 		libncurses5-dev \
 		uuid-dev \
 		libjansson-dev \
-		libxml2-dev \
+		libxml2-dev libxslt1-dev \
 		libsqlite3-dev \
 		libssl-dev \
 	&&\
