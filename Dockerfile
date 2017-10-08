@@ -73,7 +73,8 @@ RUN \
 
 	# cleanup
 
-	rm -rf /usr/src/asterisk-$ASTERISK_VERSION &&\
+    cd .. &&\
+	rm -rf asterisk-$ASTERISK_VERSION &&\
 	rm /tmp/* &&\
 	apt-get purge --auto-remove -y \
 		build-essential \
