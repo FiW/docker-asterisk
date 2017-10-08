@@ -57,7 +57,7 @@ RUN \
 		--disable BUILD_NATIVE \
 		--disable CORE-SOUNDS-EN-GSM \
 		--enable CORE-SOUNDS-RU-ULAW \
-		--enable codec_opus
+		--enable codec_opus \
 	&&\
 
 	# mp3
