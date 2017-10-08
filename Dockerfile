@@ -72,6 +72,7 @@ RUN \
 
 	make &&\
 	make install &&\
+	cp contrib/scripts/ast_tls_cert /usr/sbin &&\
 
 	# cleanup
 
