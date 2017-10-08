@@ -26,7 +26,7 @@ RUN \
 		xmlstarlet libxml2-dev libxslt1-dev \
 		libsqlite3-dev \
 		libssl-dev \
-#		zlib1g-dev \
+		libcurl3 libcurl4-openssl-dev \
 	&&\
 	cd /usr/src &&\
 	wget -O - http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-$ASTERISK_VERSION.tar.gz | tar zxf - &&\
@@ -86,6 +86,7 @@ RUN \
 		libxml2-dev libxslt1-dev \
 		libsqlite3-dev \
 		libssl-dev \
+		libcurl4-openssl-dev \
 	&&\
 	apt-get clean &&\
 	rm -rf /var/lib/apt/lists/*
