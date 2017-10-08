@@ -14,7 +14,7 @@ RUN \
 
 	apt-get install -y \
 		build-essential \
-		wget \
+		curl \
 	&&\
 
 	# asterisk
@@ -30,7 +30,7 @@ RUN \
 		zlib1g-dev \
 	&&\
 	cd /usr/src &&\
-	wget -O - http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-$ASTERISK_VERSION.tar.gz | tar zxf - &&\
+	curl http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-$ASTERISK_VERSION.tar.gz | tar zxf - &&\
 	cd asterisk-$ASTERISK_VERSION &&\
 
 	# ast_mongo
@@ -42,7 +42,7 @@ RUN \
 #		automake \
 #		pkg-config \
 #	&&\
-#	wget -O - https://github.com/minoruta/ast_mongo/raw/master/patches/ast_mongo-15.0.0.patch | sed 's~/local/~/~' | patch -p1 &&\
+#	curl https://raw.githubusercontent.com/minoruta/ast_mongo/master/patches/ast_mongo-15.0.0.patch | sed 's~/local/~/~' | patch -p1 &&\
 #	./bootstrap.sh &&\
 #	apt-get purge --auto-remove -y \
 #		autoconf \
@@ -81,7 +81,7 @@ RUN \
 	rm /tmp/* &&\
 	apt-get purge --auto-remove -y \
 		build-essential \
-		wget \
+		curl \
 		libncurses5-dev \
 		uuid-dev \
 		libjansson-dev \
