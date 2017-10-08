@@ -28,6 +28,7 @@ RUN \
 		libssl-dev \
 		libcurl3 libcurl4-openssl-dev \
 		zlib1g-dev \
+		libsrtp2-1 libsrtp2-dev \
 	&&\
 	cd /usr/src &&\
 	curl http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-$ASTERISK_VERSION.tar.gz | tar zxf - &&\
@@ -90,6 +91,7 @@ RUN \
 		libssl-dev \
 		libcurl4-openssl-dev \
 		zlib1g-dev \
+		libsrtp2-dev \
 	&&\
 	apt-get clean &&\
 	rm -rf /var/lib/apt/lists/*
